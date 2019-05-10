@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onCreate");
         Log.d("Lifecycle", "onSaveInstanceState");
         outState.putString(keyTextView, textViewField.getText().toString());
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        textViewField = findViewById(R.id.textView);
         if (savedInstanceState != null) {
             textViewField.setText(savedInstanceState.getString(keyTextView));
             textViewField.append("\n" + "onRestoreInstanceState");
@@ -43,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onStart");
         Log.d("Lifecycle", "onStart");
     }
@@ -51,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onResume");
         Log.d("Lifecycle", "onResume");
     }
@@ -59,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onPause");
         Log.d("Lifecycle", "onPause");
     }
@@ -67,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onStop");
         Log.d("Lifecycle", "onStop");
     }
@@ -75,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onDestroy");
         Log.d("Lifecycle", "onDestroy");
     }
@@ -83,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onRestart");
         Log.d("Lifecycle", "onRestart");
     }
@@ -91,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onPostCreate");
         Log.d("Lifecycle", "onPostCreate");
     }
@@ -99,14 +90,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onPostResume");
         Log.d("Lifecycle", "onPostResume");
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onKeyDown");
         Log.d("Lifecycle", "onKeyDown");
         return true;//super.onKeyDown(keyCode, event);
@@ -114,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyLongPress(int keyCode, KeyEvent event) {
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onKeyLongPress");
         Log.d("Lifecycle", "onKeyLongPress");
         return super.onKeyLongPress(keyCode, event);
@@ -122,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        textViewField = findViewById(R.id.textView);
         textViewField.append("\n" + "onBackPressed");
         Log.d("Lifecycle", "onBackPressed");
         super.onBackPressed();
